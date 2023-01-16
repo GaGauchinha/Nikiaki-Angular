@@ -1,0 +1,17 @@
+<div id="receita-lista">
+  <section class="receita">
+      <div class="receita">
+        <div *ngFor="let receita of receitas">
+          <div class="card">
+            <div fxFlex="25">
+              <div class="artifact-box">
+                <div class="set-name">{{ receita.receita_nome }}</div>
+                <div class="set-type">{{ receita.receita_porcoes }}</div>
+                <div class="main-stat">{{ receita.receita_categoria}}</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+  </section>
+</div>

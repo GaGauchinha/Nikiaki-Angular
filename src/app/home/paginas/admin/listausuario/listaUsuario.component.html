@@ -1,0 +1,28 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-2">
+      <app-listausuario [routerLink]="['/lista-usuario', usuario.usuario_id ,'edit']">
+      </app-listausuario>
+      <div class="col">
+        <button class="btn btn-primary" type="button" [routerLink]="['/usuario/lista-usuario',  usuario.usuario_id, usuario.usuario_nome]">Back</button>
+      </div>
+    </div>
+    <div class="box">
+      <div class="col">
+        <div class="row md-2">
+          <div class="col">
+            <h2 class="md">Edit</h2>
+            <div class="line"></div>
+          </div>
+        </div>
+        <form class="row" #f="ngForm" >
+        <div class="row">
+            <div class="col-12" id="delete">
+              <button class="btn btn-primary" type="button" *ngIf="isEdit" (click)="deleteUsuario()" [routerLink]="['/usuario/lista-usuario',  usuario.usuario_id, usuario.usuario_nome]">Delete</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

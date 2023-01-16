@@ -1,0 +1,21 @@
+<app-navbar></app-navbar>
+<nav class="navbar navbar-expand navbar-dark bg-dark">
+    <a href="#" class="navbar-brand">Nikiaki Foods</a>
+    <div class="navbar-nav mr-auto">
+        <li class="nav-item">
+            <a routerLink="registerusuario" class="nav-link">Registrar usuário</a>
+        </li>
+        <li class="nav-item">
+            <a routerLink="registerreceita" class="nav-link">Registrar Receita</a>
+        </li>
+      <li class="nav-item">
+      <a routerLink="listareceita" class="nav-link">Lista Receita</a>
+      </li>
+      <li class="nav-item">
+        <a routerLink="lista-usuario" class="nav-link">Lista Usuários</a>
+      </li>
+    </div>
+</nav>
+<div id="main" class="container">
+    <router-outlet></router-outlet>
+</div>

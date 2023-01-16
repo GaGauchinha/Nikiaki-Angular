@@ -1,0 +1,138 @@
+<app-navbar></app-navbar>
+<div class="container">
+  <div class="row">
+
+    <!-- list -->
+    <div class="list-box">
+      <div class="row md-2">
+        <div class="col">
+          <h2 class="md">Lista Receita</h2>
+          <div class="line"></div>
+        </div>
+      </div>
+
+      <div class="item" *ngFor="let receita of receitas; let i = index">
+
+        <h3 class="name" [attr.id]="'heading' + i">
+          <button class="accordion-button" type="button" data-bs-toggle="collapse" [attr.data-target]="'#collapse' + i" aria-expanded="true" [attr.aria-controls]="'collapse' + i">
+            {{ receita.receita_nome }}
+          </button>
+        </h3>
+
+        <div class="edit-icon"><img src="../../../../../../assets/img/icons/84380.png" (click)="onClick(receita)" /></div>
+
+        <div [attr.id]="'collapse' + i" class="accordion-collapse collapse"  [attr.aria-labelledby]="'heading' + i" data-bs-parent="#accordionExample">
+          <div class="accordion-body">
+            <div class="desc">
+              <div>Categoria{{ receita.receita_categoria }}</div>
+              <div class="line"></div>
+              <div>Porções: {{ receita.receita_porcoes }}</div>
+              <div class="line"></div>
+              <div>Tempo de Preparo: {{ receita.receita_tempodepreparo }}</div>
+              <div class="line"></div>
+              <div>Ingredientes: {{ receita.receita_ingredientes }}</div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- add -->
+    <div class="row">
+      <div class="col">
+        <div class="register-box">
+
+          <div class="row md-2">
+            <div class="col">
+              <h2 class="md">Registrar Receita</h2>
+              <div class="line"></div>
+            </div>
+          </div>
+
+          <div class="set-form">
+            <form class="row" #f="ngForm">
+              <div class="row md-2">
+                <div class="col-5">
+                  <label for="receita_nome" class="form-label">Nome:</label>
+                </div>
+                <div class="row">
+                  <div class="col">
+                    <input [(ngModel)]="receita.receita_nome" type="text" class="form-control" id="receita_nome" name="receita_nome" required>
+                  </div>
+                </div>
+              </div>
+
+
+              <div class="row  md-2">
+                <div class="col-5">
+                  <h3>Características:</h3>
+                  <div class="line"></div>
+                </div>
+              </div>
+              <div class="row md-2">
+                <div class="col-5">
+                  <label for="receita_categoria" class="form-label">Categoria:</label>
+                </div>
+                <div class="row">
+                  <div class="col">
+                    <input [(ngModel)]="receita.receita_categoria" type="text" class="form-control" id="receita_categoria" name="receita_categoria">
+                  </div>
+                </div>
+              </div>
+              <div class="row md-2">
+                <div class="col-5">
+                  <label for="receita_tempodepreparo" class="form-label">Tempo de Preparo:</label>
+                </div>
+                <div class="row">
+                  <div class="col">
+                    <input [(ngModel)]="receita.receita_tempodepreparo" type="text" class="form-control" id="receita_tempodepreparo" name="receita_tempodepreparo">
+                  </div>
+                </div>
+              </div>
+              <div class="row md-2">
+                <div class="col-5">
+                  <label for="receita_ingredientes" class="form-label">Ingredientes:</label>
+                </div>
+                <div class="row">
+                  <div class="col">
+                    <input [(ngModel)]="receita.receita_ingredientes" type="text" class="form-control" id="receita_ingredientes" name="receita_ingredientes">
+                  </div>
+                </div>
+              </div><div class="row md-2">
+              <div class="col-5">
+                <label for="receita_porcoes" class="form-label">Porções:</label>
+              </div>
+              <div class="row">
+                <div class="col">
+                  <input [(ngModel)]="receita.receita_porcoes" type="text" class="form-control" id="receita_porcoes" name="receita_porcoes">
+                </div>
+              </div>
+            </div>
+              <div class="row md-2">
+                <div class="row">
+                  <div class="col">
+                    <a class="btn btn-primary" id="clear" (click)="clear()">Cancel</a>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col">
+                    <!-- <button id="btn-save " type="submit" class="btn btn-primary " (click)="addArtifact() ">Save</button> -->
+                    <!-- <button *ngIf="isEdit" id="btn-save " type="submit " [routerLink]="[ '/characters'] " class="btn btn-primary " (click)="editSet()">Edit</button> -->
+                    <button *ngIf="!isEdit" id="btn-add" type="submit" (click)="addReceita()" class="btn btn-primary">Registrar</button>
+                  </div>
+                  <div class="row">
+                    <div class="col">
+                      <button *ngIf="isEdit" id="btn-save" type="submit " (click)="editReceita()" class="btn btn-primary ">Editar</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>

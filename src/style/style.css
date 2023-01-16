@@ -1,0 +1,328 @@
+#menu{
+    background-color: #f1d07c;
+}
+.logo{
+    width:4em;
+}
+.lista{
+  padding-right: 2em;
+  padding-left: 2em;
+
+}
+#search{
+    width: 40px;
+}
+#encontre{
+width:10em;
+}
+
+@media (min-width: 400px) and (max-width: 767.98px) {
+  #encontre{
+    width:9em;
+  }
+}
+
+#carrossel{
+
+  margin-top: 20px;
+  background-color: #f8bd29;
+  box-shadow: #f1d07c 5px 5px 1px;
+}
+.social-media {
+    display: inline-block; }
+    .social-media p a {
+      border: 1px solid #e6e6e6;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      margin-top:1em;
+      margin-right: 4px; }
+      .social-media p a span {
+        color: #4d4d4d; }
+      .social-media p a:hover {
+        background: #f1bc31;
+        border-color: #f1bc31; }
+        .social-media p a:hover span {
+          color: #fff; }
+
+/*----------------Código do BTT----------------*/
+
+.bd-placeholder-img {
+    font-size: 1.125rem;
+    text-anchor: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+  }
+
+  @media (min-width: 768px) {
+    .bd-placeholder-img-lg {
+      font-size: 3.5rem;
+    }
+  }
+
+  .b-example-divider {
+    height: 3rem;
+    background-color: rgba(0, 0, 0, .1);
+    border: solid rgba(0, 0, 0, .15);
+    border-width: 1px 0;
+    box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+  }
+
+  .b-example-vr {
+    flex-shrink: 0;
+    width: 1.5rem;
+    height: 100vh;
+  }
+
+  .bi {
+    vertical-align: -.125em;
+    fill: currentColor;
+  }
+
+  .nav-scroller {
+    position: relative;
+    z-index: 2;
+    height: 2.75rem;
+    overflow-y: hidden;
+  }
+
+  .nav-scroller .nav {
+    display: flex;
+    flex-wrap: nowrap;
+    padding-bottom: 1rem;
+    margin-top: -1px;
+    overflow-x: auto;
+    text-align: center;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch;
+  }
+ /*----------------Fim do código BTT----------------*/
+
+ /*----------------Início Carrossel----------------*/
+.carousel {
+  width: 100%;
+}
+
+.slide-box {
+  display: flex;
+  justify-content: space-between;
+}
+
+@media (min-width: 576px) and (max-width: 767.98px) {
+  .slide-box img {
+    -ms-flex: 0 0 50%;
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .slide-box img {
+    -ms-flex: 0 0 33.3333%;
+    flex: 0 0 33.3333%;
+    max-width: 33.3333%;
+  }
+}
+
+@media (min-width: 992px)
+{
+  .slide-box img {
+    -ms-flex: 0 0 25%;
+    flex: 0 0 25%;
+    max-width: 25%;
+  }
+}
+
+.carousel-caption {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 20px;
+  border-radius: .5rem;
+}
+/*--------------------------------Fim Carrossel----------------*/
+/*--------------------------------Bloco de Destaque----------------*/
+
+
+#destaque{
+  background-color: #f1d07c;
+  margin-top: 20px;
+  font-size: 15px;
+}
+
+.titulo-destaque{
+  padding:0.3em;
+  font-weight: bold;
+  font-family: 'Raleway', sans-serif;
+  font-family: 'Roboto Condensed', sans-serif;
+}
+
+
+@media (min-width: 400px) and (max-width: 767.98px) {
+
+  .titulo-destaque{
+    padding:0.25em;
+    font-size: 2em;
+    text-shadow: 2px 1px 2px #fff;
+    font-weight: bold;
+    font-family: 'Raleway', sans-serif;
+    font-family: 'Roboto Condensed', sans-serif;
+  }
+
+}
+
+/*----------------Bloco de Destaque----------------*/
+
+/*--------------------------------Inicio Bloco do Meio----------------*/
+
+.box-center{
+  margin-top: 1em;
+}
+@media(min-width: 400px) and (max-width: 767.98px) {
+  .box-center{
+    margin-top: 1em;
+    position:relative;
+  }
+}
+/*Dando problema de posicionamento por causa do width acho*/
+
+
+/*--------------------------------Fim Bloco do Meio----------------*/
+
+/*--------------------------------Inicio Cards da Direita----------------*/
+
+.card-direita{
+  position:relative;
+  float:right;
+  border: #4e4d00;
+  border-style:solid;
+  border-width: 0.1em;
+  text-decoration: none;
+  width: 25em;
+  margin-right: 56em;
+  margin-top: 2em;
+}
+
+.distancia-card{
+  margin: 0.3em;
+}
+@media(min-width: 400px) and (max-width: 767.98px) {
+  .card-direita{
+    border: 30px solid transparent;
+    background-color: #f1d792;
+    border-image: url("src/assets/image/borda/borda-amarela.png") 150 round;
+    /*border: #8b7f00;
+    border-style:solid;
+    border-width: 0.3em;
+    border-style: double;*/
+    width: 22em;
+    margin-left: 2em;
+    margin-top: 2em;
+    position: absolute;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .card-direita{
+    width: 20em;
+    text-decoration: none;
+
+
+  }
+}
+
+@media (min-width: 992px)
+{
+  .card-direita{
+    width: 20em;
+    text-decoration: none;
+
+  }
+}
+
+/*----------------Fim card direitas----------------*/
+/*----------------Início card meio----------------*/
+
+.card-centro{
+  width: 12px;
+}
+/*----------------Fim card meio----------------*/
+
+
+
+/*----------------Inicio Titulos Receitas----------------*/
+.titulos-receitas{
+  margin-top: 1em;
+  font-size: 1.2em;
+  font-family: 'Raleway', sans-serif;
+  font-family: 'Roboto Condensed', sans-serif;
+  color:#A57A0F;
+}
+
+@media(min-width: 400px) and (max-width: 767.98px) {
+  .titulos-receitas{
+    margin-top: 1em;
+    margin-left:5%;
+    text-align: center;
+    font-size: 1.4em;
+    font-family: 'Raleway', sans-serif;
+    font-family: 'Roboto Condensed', sans-serif;
+    color:#8a5e01;
+    text-shadow: 0px 0px 1px #63481f;
+    font-weight: bold;
+  }
+}
+/*----------------Fim dos Títulos Receitas----------------*/
+
+/*----------------Inicio Descrição Receitas----------------*/
+.link-receitas{
+  margin-top: 1em;
+  font-size: 1.2em;
+  color:#33000a;
+  text-decoration: none;
+  font-weight: bold;
+}
+.link-receitas:hover{
+  text-decoration: none;
+  color:#33000a;
+
+}
+.no-decoration{
+  text-decoration: none;
+}
+@media(min-width: 400px) and (max-width: 767.98px) {
+
+  .link-receitas{
+    margin-top: 1.5em;
+    font-size: 1em;
+    color:#6e5238;
+    text-decoration: none;
+    font-weight: bold;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-family: 'Montserrat', sans-serif;
+
+  }
+  .link-receitas:hover{
+    text-decoration: none;
+    color:#33000a;
+
+  }
+
+  .no-decoration{
+    text-decoration: none;
+  }
+}
+/*----------------Fim dos Descrição Receitas----------------*/
+
+/*----------------Início da Imagem dos Cards----------------*/
+
+@media(min-width: 400px) and (max-width: 767.98px) {
+
+  .imagem-card{
+    margin: 1px 4px 0 0;
+    padding: 3px;
+    background-color: #ffffff;
+    border:ridge #fff491;
+  }
+}
+
+/*---------------Fim da Imagem dos Cards----------------*/
